@@ -8,8 +8,12 @@ class TypingTestScreen extends StatefulWidget {
 }
 
 class _TypingTestScreenState extends State<TypingTestScreen> {
+  late String sentence;
+  DateTime? startTime;
+  final TextEditingController controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold();
   }
 }
