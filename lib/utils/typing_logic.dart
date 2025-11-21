@@ -12,5 +12,19 @@ class TypingResult{
 });
 }
 class TypingLogic{
+  static TypingResult calculateResult({
+    required String original,
+    required String typed,
+    required double seconds,
+}){
+    int matching = 0;
+    int length = original.length;
 
+    for (int i = 0; i < typed.length && i < original.length; i++){
+      if (typed[i] == original[i]){
+        matching++;
+
+      }
+    }
+  }
 }
