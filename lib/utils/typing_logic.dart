@@ -38,5 +38,11 @@ class TypingLogic{
       message = "Slow";
     }
 
+    return TypingResult(
+      seconds: seconds,
+      wpm: wpm,
+      accuracy: accuracy,
+      message: message,
+    );
   }
 }
