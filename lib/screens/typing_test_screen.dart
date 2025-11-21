@@ -11,9 +11,41 @@ class _TypingTestScreenState extends State<TypingTestScreen> {
   late String sentence;
   DateTime? startTime;
   final TextEditingController controller = TextEditingController();
+  TypingResult? result;
+
+  @override
+  void initState() {
+    super.initState();
+    sentence = SentenceProvider.getRandomSentence();
+  }
+
+  void onTextChanged(String value){
+    if(value.isNotEmpty && startTime == null){
+      startTime = DateTime.now();
+    }
+  }
+
+  void submit(){
+    if(startTime == null) return;
+
+    final endTime = DateTime.now();
+    final duration = endTime.difference(startTime!);
+
+    final typingResult = TypingLogic.calculateResult(
+      original: sentence,
+      typed: controller.text,
+      seconds: duration.inMilliseconds / 1000,
+    );
+
+    setState(() {
+      result = typingResult;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Scaffold(
+
+    );
   }
 }
