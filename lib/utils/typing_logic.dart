@@ -1,0 +1,6 @@
+class TypingResult{
+
+}
+class TypingLogic{
+
+}
