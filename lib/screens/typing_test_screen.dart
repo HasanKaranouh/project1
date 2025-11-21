@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:project1/widgets/typing_input_field.dart';
+import 'package:project1/widgets/result_card.dart';
+import 'package:project1/utils/typing_logic.dart';
+import 'package:project1/utils/sentence_provider.dart';
 
 class TypingTestScreen extends StatefulWidget {
   const TypingTestScreen({super.key});
