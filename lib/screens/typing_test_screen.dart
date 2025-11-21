@@ -44,7 +44,7 @@ class _TypingTestScreenState extends State<TypingTestScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: const Text("Typing Speed Tester"),
       ),
@@ -64,8 +64,23 @@ class _TypingTestScreenState extends State<TypingTestScreen> {
               style: const TextStyle(fontSize: 16),
             ),
             const SizedBox(height: 20),
+
+            TypingInputField(
+              controller: controller,
+              onTextChanged: onTextChanged,
+            ),
+            const SizedBox(height: 20),
+
+            ElevatedButton(
+              onPressed: submit,
+              child: const Text("Submit"),
+            ),
+
+            const SizedBox(height: 20),
+
+            if (result != null) ResultCard(result: result!),
           ],
-        )
+        ),
       ),
     );
   }
