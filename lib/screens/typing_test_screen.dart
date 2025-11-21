@@ -71,7 +71,7 @@ class _TypingTestScreenState extends State<TypingTestScreen> {
 
             TypingInputField(
               controller: controller,
-              onTextChanged: onTextChanged,
+              onChanged: onTextChanged,
             ),
             const SizedBox(height: 20),
 
