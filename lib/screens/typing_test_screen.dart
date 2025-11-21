@@ -55,7 +55,7 @@ class _TypingTestScreenState extends State<TypingTestScreen> {
           children: [
             Text(
               "Type the following sentence:",
-              style: const Text(fontSize: 18, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
 
