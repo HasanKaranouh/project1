@@ -7,4 +7,8 @@ class SentenceProvider{
     "Typing fast is a useful skill for everyone.",
     "Practice every day to improve your typing speed.",
   ];
+  static String getRandomSentence(){
+    final random = Random();
+    return sentences[random.nextInt(sentences.length)];
+  }
 }
