@@ -15,5 +15,11 @@ class TypingInputField extends StatelessWidget {
     return TextField(
       controller: controller,
       onChanged: onChanged,
+        maxLines: 3,
+        decoration: const InputDecoration(
+          border: OutlineInputBorder(),
+          hintText: "Start typing here...",
+        ),
+    );
   }
 }
