@@ -14,7 +14,7 @@ class TypingSpeedApp extends StatelessWidget {
     return const MaterialApp(
       title: "Typing Speed Tester",
       debugShowCheckedModeBanner: false,
-      home: const TypingTestScreen(),
+      home: TypingTestScreen(),
     );
   }
 }
