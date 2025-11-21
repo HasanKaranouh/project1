@@ -26,5 +26,17 @@ class TypingLogic{
 
       }
     }
+    double accuracy = (matching / length) * 100;
+    double wpm = (length / 5) / (seconds / 60);
+
+    String message;
+    if(wpm > 40) {
+      message = "Fast";
+    } else if (wpm >= 25){
+      message = "Average";
+    } else {
+      message = "Slow";
+    }
+
   }
 }
